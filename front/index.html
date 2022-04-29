@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>EDA</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="js/index.js"></script>
+
+    <style>
+        html,
+        body {
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div class="container h-100 d-flex justify-content-center align-items-center"> -->
+    <div class="container">
+        <div class="row">
+            <div class="col-6 offset-2">
+                <div class="custom-file">
+                    <input type="file" class="custom-file-input" id="dataFileId"
+                        accept=".csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel">
+                    <label class="custom-file-label" for="dataFileId" id="subfilename">Choose file</label>
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="input-group-append">
+                    <button class="input-group-text" id="uploadbutton" onclick="uploadfile()">Upload</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

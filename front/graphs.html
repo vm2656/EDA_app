@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>EDA</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/highcharts-style.css">
+    <link rel="stylesheet" href="css/toggle.css">
+    <link href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <script src="js/graph.js"></script>
+    <script src="js/charts_templates.js"></script>
+    <script src="js/toggle.js"></script>
+
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+     <script src="https://code.highcharts.com/highcharts-more.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/heatmap.js"></script>
+    <script src="https://code.highcharts.com/modules/boost-canvas.js"></script>
+    <script src="https://code.highcharts.com/modules/boost.js"></script>
+    <!-- <script src="js/charttheme.js"></script> -->
+
+    <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+
+    <style>
+        /* Removing border in overview table */
+        .table thead th {
+            border-bottom: 0px;
+        }
+
+        .table th,
+        .table td {
+            border-top: 0px;
+        }
+
+        /* to place overview container at the center of screen */
+        html,
+        body {
+            height: 100%
+        }
+
+        /* remove scroll bar while still having scrolling functionality */
+        html {
+            overflow: scroll;
+            overflow-x: hidden;
+        }
+
+        ::-webkit-scrollbar {
+            width: 0px;
+            /* Remove scrollbar space */
+            background: transparent;
+            /* Optional: just make scrollbar invisible */
+        }
+
+        /* Optional: show position indicator in red */
+        ::-webkit-scrollbar-thumb {
+            background: rgb(0, 188, 140);
+        }
+
+        /* without this overview container wont be seen in its entirity on small screens */
+        @media screen and (max-width: 578px),
+        screen and (max-height: 500px) {
+            .h-100 {
+                height: auto !Important;
+            }
+
+            .card.border-success {
+                margin: 10px !Important;
+            }
+        }
+
+        /* scroll to top button */
+        .scroll-top {
+            width: 2.5rem;
+            height: 2.5rem;
+            float: right;
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            display: none;
+        }
+
+        .scroll-top i {
+            display: inline-block;
+            color: #FFFFFF;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container  justify-content-center align-items-center" id="overviewdatacontainer"
+        style="display:none;padding:5%;">
+        <div class="row justify-content-center align-items-center"
+            style="margin-top: 0px; overflow:hidden;">
+            <div class="card border-success" style="width: 100%;">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <h4 class="card-title">
+                                <h3>Data</h3>
+                            </h4>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12" id="headerdata">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col text-center">
+                            <button type="button" class="btn btn-outline-success" onclick="toggleOverview(0)">Overview</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container">
+
+        <div class="row justify-content-center">
+            <input id="myInput" type="text" placeholder="Search.." style="background-color:#303030; border-radius:25px; padding-left:2%;width:35%; height:30px;">
+        </div>
+
+
+        <div class="row justify-content-center sticky-top">
+            <!-- <div class="col-6"> -->
+            <div class="container">
+                <div class="switch switch--horizontal">
+                    <input id="radio-a" type="radio" name="first-switch" checked="checked" onclick="toggleView(0)" />
+                    <label for="radio-a">EDA</label>
+                    <input id="radio-b" type="radio" onclick="toggleView(1)" />
+                    <label for="radio-b">Own</label><span class="toggle-outside"><span
+                            class="toggle-inside"></span></span>
+                </div>
+            </div>
+            <!-- </div> -->
+        </div>
+
+        <div class="container" id="graphs">
+            <div class="container" id="canvas"></div>
+            <div class="row justify-content-center">
+            <h6 id="note" style="color: #800000;">Note: For object data type,showing only top 5 entries.</h6>
+        </div>
+        </div>
+
+        <div class="container" id="graph" style="padding:2%">
+
+            <button onclick="addRow()"  style="position:fixed;bottom:25px;left:25px;font-size:30px;text-align:center;border-radius:50%;width:45px;height:45px;background-color:rgb(0, 188, 140);color:#303030;font-weight:bold;border-color:transparent!important;outline:none;">+</button>
+
+            <div class="container" id="canvas2"></div>
+        </div>
+
+        <!-- <div class="container">
+        <div class="row"></div>
+    </div> -->
+
+        <button class="btn btn-outline-success scroll-top" data-scroll="up" type="button">
+            <i class="fa fa-chevron-up"></i>
+        </button>
+
+
+    </div>
+</body>
+
+</html>

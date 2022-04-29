@@ -1,0 +1,33 @@
+<svg width="580" height="400" xmlns="http://www.w3.org/2000/svg">
+ <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
+ <defs>
+  <radialGradient r="1.200581" gradientTransform="rotate(90,0.30078125,0.23124992847442627) translate(0.5865234375,0) scale(-0.95,1)" cy="0.23125" cx="0.300781" spreadMethod="pad" id="svg_13">
+   <stop offset="0.578125" stop-color="#dd1c1a"/>
+   <stop offset="1" stop-color="#22e3e5"/>
+  </radialGradient>
+  <radialGradient r="1.200581" gradientTransform="rotate(90,0.21875,0.12187492847442627) translate(0,0.009245684229094399) scale(1,0.9241379310344828)" cy="0.121875" cx="0.21875" spreadMethod="pad" id="svg_17">
+   <stop offset="0.417969" stop-color="#2b908f"/>
+   <stop offset="1" stop-color="#d46f70"/>
+   <stop offset="1" stop-color="#d46f70"/>
+  </radialGradient>
+  <radialGradient cy="0.242969" cx="0.273438" gradientTransform="rotate(90,0.2734375,0.24296867847442627) translate(0.03582974137931036,0) scale(0.8689655172413793,1)" r="1.2" spreadMethod="pad" id="svg_18">
+   <stop offset="0.535156" stop-color="#f0c808"/>
+   <stop offset="0.992188" stop-color="#0f37f7"/>
+  </radialGradient>
+ </defs>
+ <g>
+  <title>background</title>
+  <rect fill="#ffffff" id="canvas_background" height="402" width="582" y="-1" x="-1"/>
+  <g display="none" overflow="visible" y="0" x="0" height="100%" width="100%" id="canvasGrid">
+   <rect fill="url(#gridpattern)" stroke-width="0" y="0" x="0" height="100%" width="100%"/>
+  </g>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <rect stroke="#000" rx="20" id="svg_1" height="284.474579" width="48" y="43.525423" x="114.75" stroke-width="0" fill="#07a0c3"/>
+  <rect stroke="#000" transform="rotate(-90 282.96752929687506,304) " rx="20" id="svg_2" height="335.662079" width="48" y="136.168978" x="258.967528" stroke-width="0" fill="#07a0c3"/>
+  <rect stroke="#000" id="svg_3" height="166.930528" width="42.373454" y="113.107128" x="191.899435" stroke-opacity="null" stroke-width="0" fill="url(#svg_13)"/>
+  <rect stroke="#000" id="svg_4" height="80.23364" width="42.373454" y="199.719637" x="342.119341" stroke-opacity="null" stroke-width="0" fill="url(#svg_17)"/>
+  <rect stroke="#000" id="svg_5" height="122.887827" width="42.373454" y="157.222174" x="268.757188" stroke-opacity="null" stroke-width="0" fill="url(#svg_18)"/>
+ </g>
+</svg>
